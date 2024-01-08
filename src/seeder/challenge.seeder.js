@@ -15,13 +15,13 @@ export const challengeList = [
     name: 'Challenge 3',
     description: 'description asdasdas 3',
     reward: 3,
-    status: true
+    status: false
   },
   {
     name: 'Challenge 4',
     description: 'description asdasdas 4',
     reward: 2,
-    status: true
+    status: false
   },
   {
     name: 'Challenge 5',
