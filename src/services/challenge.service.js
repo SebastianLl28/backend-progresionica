@@ -8,8 +8,6 @@ export const findChallengesActiveSolvedByUser = async (userId) => {
     attributes: ['challengeId']
   })
   const idsChallengeIds = results.map((result) => result.challengeId)
-  console.log(idsChallengeIds)
-
   return idsChallengeIds
 }
 

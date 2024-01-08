@@ -1,4 +1,9 @@
-import { createRoutine, deleteRoutineById, editRoutine, findRoutineByUserId } from '../services/routine.services.js'
+import {
+  createRoutine,
+  deleteRoutineById,
+  editRoutine,
+  findRoutineByUserId
+} from '../services/routine.services.js'
 
 export const getAllRoutineByUser = async (req, res) => {
   try {
@@ -29,10 +34,11 @@ export const postRoutineByUser = async (req, res) => {
 export const putRoutine = async (req, res) => {
   try {
     const { id } = req.params
-    const { name, description } = req.body
+    const { name, description, state } = req.body
     const routine = {
       name,
-      description
+      description,
+      state: state ?? false
     }
     await editRoutine(routine, id)
     res.status(200).json({ message: 'rutina editada correctamente' })

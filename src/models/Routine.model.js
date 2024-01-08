@@ -12,7 +12,12 @@ const Routine = db.define(
       type: DataTypes.STRING,
       allowNull: false
     },
-    description: DataTypes.STRING
+    description: DataTypes.STRING,
+    state: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
+      allowNull: false
+    }
   }, {
     freezeTableName: true,
     createdAt: false,
