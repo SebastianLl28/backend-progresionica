@@ -16,3 +16,5 @@ export const getUserByEmail = async email => {
 }
 
 export const findUserById = async id => await User.findByPk(id)
+
+export const updateUserById = async (id, newUser) => await User.update(newUser, { where: { id } })

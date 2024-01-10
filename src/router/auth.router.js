@@ -1,5 +1,5 @@
 import { Router } from 'express'
-import { postCreateUser, postLogin, getVerifyToken } from '../controller/auth.controller.js  '
+import { postCreateUser, postLogin, getVerifyToken } from '../controller/auth.controller.js'
 import { verifyTotken } from '../middleware/verifyTotken.js'
 
 const router = Router()
