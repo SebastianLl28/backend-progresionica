@@ -18,11 +18,12 @@ export const getAllRoutineByUser = async (req, res) => {
 export const postRoutineByUser = async (req, res) => {
   try {
     const { id } = req.user
-    const { name, description } = req.body
+    const { name, description, time } = req.body
     const routine = {
       name,
       description,
-      userId: id
+      userId: id,
+      time
     }
     await createRoutine(routine)
     res.status(200).json({ message: 'rutina creada' })
@@ -34,11 +35,12 @@ export const postRoutineByUser = async (req, res) => {
 export const putRoutine = async (req, res) => {
   try {
     const { id } = req.params
-    const { name, description, state } = req.body
+    const { name, description, state, time } = req.body
     const routine = {
       name,
       description,
-      state: state ?? false
+      state: state ?? false,
+      time
     }
     await editRoutine(routine, id)
     res.status(200).json({ message: 'rutina editada correctamente' })

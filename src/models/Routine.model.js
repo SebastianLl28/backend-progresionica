@@ -17,6 +17,11 @@ const Routine = db.define(
       type: DataTypes.BOOLEAN,
       defaultValue: false,
       allowNull: false
+    },
+    time: {
+      type: DataTypes.TIME,
+      allowNull: false,
+      defaultValue: '00:00:00'
     }
   }, {
     freezeTableName: true,
